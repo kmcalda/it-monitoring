@@ -14,3 +14,9 @@ class printers_devices(models.Model):
     printer_warranty_expiration = fields.Date(string='Warranty Expiration')
     printer_condition = fields.Char(string='Condition')
     printer_age = fields.Char(string='Age')
+
+    _sql_constraints = [
+        ('printer_serial_number_unique',
+         'unique(printer_serial_number)',
+         "Error! serial number already exist!"),
+    ]
