@@ -3,7 +3,7 @@
     <data>
 
         <record model="ir.ui.view" id="course_tree_view">
-            <field name="name">course.tree</field>
+            <field name="name">laptops.tree</field>
             <field name="model">laptops.devices</field>
             <field name="arch" type="xml">
                 <tree string="Laptops Tree">
