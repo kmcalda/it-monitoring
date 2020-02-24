@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
+        <record model="ir.ui.view" id="course_tree_view">
+            <field name="name">course.tree</field>
+            <field name="model">desktops.devices</field>
+            <field name="arch" type="xml">
+                <tree string="Desktops Tree">
+                    <field name="desktop_user"/>
+                    <field name="desktop_serial_number"/>
+                    <field name="desktop_model"/>
+                    <field name="desktop_condition"/>
+                </tree>
+            </field>
+        </record>
+
         <record model="ir.actions.act_window" id="desktops_list_action">
             <field name="name">Desktops</field>
             <field name="res_model">desktops.devices</field>
