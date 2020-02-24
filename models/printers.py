@@ -3,7 +3,7 @@ from odoo import models, fields, api
 class printers_devices(models.Model):
     _name = 'printers.devices'
 
-    printer_user = fields.Char(string='User')
+    printer_user = fields.Many2one('res.users', string='User')
     printer_image = fields.Binary(string='Image')
     printer_serial_number = fields.Char(string='Serial Number')
     printer_brand = fields.Char(string='Brand')
