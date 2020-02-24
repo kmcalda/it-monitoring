@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
+
+        <record model="ir.ui.view" id="course_tree_view">
+            <field name="name">printers.tree</field>
+            <field name="model">printers.devices</field>
+            <field name="arch" type="xml">
+                <tree string="Printers Tree">
+                    <field name="printer_user"/>
+                    <field name="printer_serial_number"/>
+                    <field name="printer_model"/>
+                    <field name="printer_condition"/>
+                </tree>
+            </field>
+        </record>
         <record model="ir.actions.act_window" id="printers_list_action">
             <field name="name">Printers</field>
             <field name="res_model">printers.devices</field>
