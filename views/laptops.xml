@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record model="ir.actions.act_window" id="laptops_list_action">
+            <field name="name">Laptops</field>
+            <field name="res_model">laptops.devices</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">Create Record
+                </p>
+            </field>
+        </record>
+
+        <menuitem id="main_it_monitoring_menu" name="IT Devices"/>
+        <menuitem id="laptpos_menu" name="Laptops"
+                  parent="main_it_monitoring_menu" action="laptops_list_action"/>
+
+
+
+
+    </data>
+</odoo>
