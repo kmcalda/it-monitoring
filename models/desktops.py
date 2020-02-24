@@ -20,3 +20,9 @@ class desktops_devices(models.Model):
     desktop_condition = fields.Char(string='Condition')
     desktop_age = fields.Char(string='Age')
     desktop_issued = fields.Date(string='Date issued')
+
+    _sql_constraints = [
+        ('desktop_serial_number_unique',
+         'unique(desktop_serial_number)',
+         "Error! serial number already exist!"),
+    ]
