@@ -3,6 +3,7 @@ from odoo import fields, models, api
 
 class desktops_devices(models.Model):
     _name = 'desktops.devices'
+    _description = 'for desktop'
 
     desktop_user = fields.Many2one('res.users', string='User')
     desktop_image = fields.Binary(string='Image')
@@ -14,7 +15,7 @@ class desktops_devices(models.Model):
     desktop_ram = fields.Char(string='RAM')
     desktop_office = fields.Char(string='Office')
     desktop_supplier = fields.Char(string='Supplier')
-    desktop_market_value = fields.Char(string='Market Value')
+    desktop_market_value = fields.Float(string='Market Value', digit=(12,2))
     desktop_purchase_date = fields.Date(string='Purchase Date')
     desktop_warranty_expiration = fields.Date(string='Warranty Expiration')
     desktop_condition = fields.Char(string='Condition')

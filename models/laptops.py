@@ -2,6 +2,7 @@ from odoo import models, fields, api
 
 class laptops_devices(models.Model):
     _name = 'laptops.devices'
+    _description = 'for laptop'
 
     laptop_image = fields.Binary(string='Image')
     laptop_user = fields.Many2one('res.users',string='User')
@@ -14,11 +15,11 @@ class laptops_devices(models.Model):
     laptop_ram = fields.Char(string='RAM')
     laptop_office = fields.Char(string='Office')
     laptop_supplier = fields.Char(string='Supplier')
-    laptop_market_value = fields.Char(string='Market Value')
+    laptop_market_value = fields.Float(string='Market Value', digits=(12,2))
     laptop_purchase_date = fields.Date(string='Purchase Date')
     laptop_warranty_expiration = fields.Date(string='Warranty Expire')
     laptop_condition = fields.Char(string='Condition')
-    laptop_age = fields.Char(string='Age'
+    laptop_age = fields.Char(string='Age')
 
     _sql_constraints = [
         ('laptop_serial_number_unique',
