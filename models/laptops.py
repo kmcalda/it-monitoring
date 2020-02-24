@@ -18,4 +18,10 @@ class laptops_devices(models.Model):
     laptop_purchase_date = fields.Date(string='Purchase Date')
     laptop_warranty_expiration = fields.Date(string='Warranty Expire')
     laptop_condition = fields.Char(string='Condition')
-    laptop_age = fields.Char(string='Age')
+    laptop_age = fields.Char(string='Age'
+
+    _sql_constraints = [
+        ('laptop_serial_number_unique',
+         'unique(laptop_serial_number)',
+         "Error! serial number already exist!"),
+    ]
