@@ -4,7 +4,7 @@ class laptops_devices(models.Model):
     _name = 'laptops.devices'
 
     laptop_image = fields.Binary(string='Image')
-    laptop_user = fields.Char(string='User')
+    laptop_user = fields.Many2one('res.users',string='User')
     laptop_serial_number = fields.Char(string='Serial Number')
     laptop_os = fields.Char(string='Operating System')
     laptop_brand = fields.Char(string='Brand')
