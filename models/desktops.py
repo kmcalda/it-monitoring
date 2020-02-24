@@ -4,7 +4,7 @@ from odoo import fields, models, api
 class desktops_devices(models.Model):
     _name = 'desktops.devices'
 
-    desktop_user = fields.Char(string='User')
+    desktop_user = fields.Many2one('res.users', string='User')
     desktop_image = fields.Binary(string='Image')
     desktop_serial_number = fields.Char(string='Serial Number')
     desktop_model = fields.Char(string='Model')
