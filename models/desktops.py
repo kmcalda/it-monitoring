@@ -4,6 +4,7 @@ from odoo import fields, models, api
 class desktops_devices(models.Model):
     _name = 'desktops.devices'
     _description = 'for desktop'
+    _rec_name = 'desktop_user'
 
     desktop_user = fields.Many2one('res.users', string='User')
     desktop_image = fields.Binary(string='Image')

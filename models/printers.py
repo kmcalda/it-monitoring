@@ -4,6 +4,7 @@ from odoo import models, fields, api
 class printers_devices(models.Model):
     _name = 'printers.devices'
     _description = 'for printers'
+    _rec_name = 'printer_user'
 
     printer_user = fields.Many2one('res.users', string='User')
     printer_image = fields.Binary(string='Image')
