@@ -9,7 +9,9 @@
     'license': 'AGPL-3',
     'depends': ['base'],
     'data': [
-        'views/devices.xml',
+        'views/laptops.xml',
+        'views/desktops.xml',
+        'views/printers.xml',
     ],
     'application': True,
     'installation': True,
