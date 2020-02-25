@@ -8,7 +8,7 @@ class printers_devices(models.Model):
 
     printer_user = fields.Many2one('res.users', string='User')
     printer_image = fields.Binary(string='Image')
-    printer_serial_number = fields.Char(string='Serial Number')
+    printer_serial_number = fields.Char(string='Serial Number', required=1)
     printer_brand = fields.Char(string='Brand')
     printer_model = fields.Char(string='Model')
     printer_supplier = fields.Char(string='Supplier')
@@ -23,3 +23,8 @@ class printers_devices(models.Model):
          'unique(printer_serial_number)',
          "Error! serial number already exist!"),
     ]
+
+    @api.onchange('printer_serial_number')
+    def _make_uppercase(self):
+        if self.printer_serial_number:
+            self.printer_serial_number = str(self.printer_serial_number).upper()
