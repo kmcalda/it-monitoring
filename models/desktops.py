@@ -28,3 +28,8 @@ class desktops_devices(models.Model):
          'unique(desktop_serial_number)',
          "Error! serial number already exist!"),
     ]
+
+    @api.onchange('desktop_serial_number')
+    def _make_uppercase(self):
+        if self.desktop_serial_number:
+            self.desktop_serial_number = str(self.desktop_serial_number).upper()
