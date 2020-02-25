@@ -10,7 +10,7 @@ class printers_devices(models.Model):
     printer_image = fields.Binary(string='Image')
     printer_serial_number = fields.Char(string='Serial Number', required=1)
     printer_brand = fields.Char(string='Brand')
-    printer_model = fields.Char(string='Model')
+    printer_model = fields.Char(string='Model name')
     printer_supplier = fields.Char(string='Supplier')
     printer_market_value = fields.Float(string='Market Value', digits=(12, 2))
     printer_purchase_date = fields.Date(string='Purchase Date')
