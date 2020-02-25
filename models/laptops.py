@@ -27,3 +27,8 @@ class laptops_devices(models.Model):
          'unique(laptop_serial_number)',
          "Error! serial number already exist!"),
     ]
+
+    @api.onchange('laptop_serial_number')
+    def _make_uppercase(self):
+        if self.laptop_serial_number:
+            self.laptop_serial_number = str(self.laptop_serial_number).upper()
