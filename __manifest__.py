@@ -8,7 +8,7 @@
     'category': 'Tool',
     'version': '0.1',
     'license': 'AGPL-3',
-    'depends': ['base'],
+    'depends': ['base','mail'],
     'data': [
         'views/laptops.xml',
         'views/desktops.xml',

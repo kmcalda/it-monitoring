@@ -22,18 +22,33 @@
                                 <field name="printer_brand"/>
                             </group>
                             <group>
-                                <field name="printer_supplier"/>
+                                <field name="printer_supplier" options="{'no_create': True}"/>
                                 <field name="printer_market_value" widget='monetary'
                                        options="{'currency_id': %(base.PHP)d}"/>
                                 <field name="printer_purchase_date"/>
                                 <field name="printer_warranty_expiration"/>
                             </group>
-                            <label for="printer_comment"/>
-                            <field name="printer_comment" placeholder="Comment..."/>
                         </group>
+                         <notebook>
+                                <page string="Internal Notes">
+                                    <field name="printer_comment" placeholder="Comment..."/>
+                                </page>
+                         </notebook>
                     </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
                 </form>
             </field>
+        </record>
+
+        <record id="subtype_xml" model="mail.message.subtype">
+            <field name="name">User Fields</field>
+            <field name="res_model">printers.devices</field>
+            <field name="default" eval="True"/>
+            <field name="description">The issue has been closed.</field>
         </record>
 
         <record model="ir.ui.view" id="course_tree_view">
