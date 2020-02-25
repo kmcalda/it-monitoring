@@ -8,28 +8,28 @@
             <field name="arch" type="xml">
                 <form string="Printers Form">
                     <sheet>
-                        <field name="printer_image" widget="image" class="oe_avatar"
-                               options="{&quot;preview_image&quot;: &quot;image_128&quot;}"/>
+                        <field name="printer_image" widget="image" class="oe_avatar"/>
                         <div class="oe_title">
                             <label for="printer_model" class="oe_edit_only"/>
                             <h1><field name="printer_model" placeholder="e.g HP Officejet Pro 8710" required="1"/></h1>
+                            <field name="printer_condition"/>
+                            <label for="printer_condition"/>
                         </div>
                         <group>
                             <group>
                                 <field name="printer_user"/>
                                 <field name="printer_serial_number"/>
-                                <field name="printer_supplier"/>
-                                <field name="printer_purchase_date"/>
-                                <field name="printer_condition"/>
+                                <field name="printer_brand"/>
                             </group>
                             <group>
-                                <field name="printer_brand"/>
                                 <field name="printer_supplier"/>
-                                <field name="printer_warranty_expiration"/>
-                                <field name="printer_condition"/>
                                 <field name="printer_market_value" widget='monetary'
                                        options="{'currency_id': %(base.PHP)d}"/>
+                                <field name="printer_purchase_date"/>
+                                <field name="printer_warranty_expiration"/>
                             </group>
+                            <label for="printer_comment"/>
+                            <field name="printer_comment" placeholder="Comment..."/>
                         </group>
                     </sheet>
                 </form>
@@ -44,7 +44,7 @@
                     <field name="printer_user"/>
                     <field name="printer_serial_number"/>
                     <field name="printer_model"/>
-                    <field name="printer_condition"/>
+                    <field name="printer_brand"/>
                 </tree>
             </field>
         </record>

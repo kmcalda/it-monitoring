@@ -15,8 +15,9 @@ class printers_devices(models.Model):
     printer_market_value = fields.Float(string='Market Value', digits=(12, 2))
     printer_purchase_date = fields.Date(string='Purchase Date')
     printer_warranty_expiration = fields.Date(string='Warranty Expiration')
-    printer_condition = fields.Char(string='Condition')
+    printer_condition = fields.Boolean(string='Unit in use')
     printer_age = fields.Char(string='Age')
+    printer_comment = fields.Text(string='Internal Notes')
 
     _sql_constraints = [
         ('printer_serial_number_unique',

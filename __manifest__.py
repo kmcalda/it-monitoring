@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
 {
     'name': "IT Devices",
-    'summary': """
+    'summary': """Devices inventory for IT helpdesk
         """,
+    'website': "https://github.com/kmcalda/it-monitoring.git",
     'author': "Kevin Marvin Calda",
     'category': 'Tool',
     'version': '0.1',
