@@ -23,9 +23,8 @@
                                 <field name="printer_supplier"/>
                                 <field name="printer_warranty_expiration"/>
                                 <field name="printer_condition"/>
-                                <field name="currency_id"/>
                                 <field name="printer_market_value" widget='monetary'
-                                       options="{'currency_field': 'currency_id'}"/>
+                                       options="{'currency_id': %(base.PHP)d}"/>
                             </group>
                         </group>
                     </sheet>
