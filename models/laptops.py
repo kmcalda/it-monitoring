@@ -3,7 +3,7 @@ from odoo import models, fields, api
 class laptops_devices(models.Model):
     _name = 'laptops.devices'
     _description = 'for laptop'
-    _rec_name = 'laptop_user'
+    _rec_name = 'laptop_model'
 
     laptop_image = fields.Binary(string='Image')
     laptop_user = fields.Many2one('res.users',string='User')
