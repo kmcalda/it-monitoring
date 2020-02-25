@@ -6,7 +6,7 @@ class printers_devices(models.Model):
     _description = 'for printers'
     _rec_name = 'printer_user'
 
-    printer_user = fields.Many2one('res.users', string='User')
+    printer_user = fields.Many2one('res.users', string='User', required=True)
     printer_image = fields.Binary(string='Image')
     printer_serial_number = fields.Char(string='Serial Number', required=1)
     printer_brand = fields.Char(string='Brand')

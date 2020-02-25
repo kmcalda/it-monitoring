@@ -8,6 +8,9 @@
             <field name="arch" type="xml">
                 <form string="Printers Form">
                     <sheet>
+                        <div class="oe_button_box" name="button_box"/>
+                        <field name="printer_image" widget="image" class="oe_avatar"
+                               options="{&quot;preview_image&quot;: &quot;image_128&quot;}"/>
                         <group>
                             <group>
                                 <field name="printer_user"/>
@@ -18,7 +21,6 @@
                                 <field name="printer_condition"/>
                             </group>
                             <group>
-                                <field name="printer_image"/>
                                 <field name="printer_brand"/>
                                 <field name="printer_supplier"/>
                                 <field name="printer_warranty_expiration"/>
