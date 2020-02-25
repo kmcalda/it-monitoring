@@ -2,6 +2,37 @@
 <odoo>
     <data>
 
+        <record model="ir.ui.view" id="printers_form_view">
+            <field name="name">printers.form</field>
+            <field name="model">printers.devices</field>
+            <field name="arch" type="xml">
+                <form string="Printers Form">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="printer_user"/>
+                                <field name="printer_serial_number"/>
+                                <field name="printer_model"/>
+                                <field name="printer_supplier"/>
+                                <field name="printer_purchase_date"/>
+                                <field name="printer_condition"/>
+                            </group>
+                            <group>
+                                <field name="printer_image"/>
+                                <field name="printer_brand"/>
+                                <field name="printer_supplier"/>
+                                <field name="printer_warranty_expiration"/>
+                                <field name="printer_condition"/>
+                                <field name="currency_id"/>
+                                <field name="printer_market_value" widget='monetary'
+                                       options="{'currency_field': 'currency_id'}"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
         <record model="ir.ui.view" id="course_tree_view">
             <field name="name">printers.tree</field>
             <field name="model">printers.devices</field>

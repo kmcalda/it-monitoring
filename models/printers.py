@@ -17,6 +17,7 @@ class printers_devices(models.Model):
     printer_warranty_expiration = fields.Date(string='Warranty Expiration')
     printer_condition = fields.Char(string='Condition')
     printer_age = fields.Char(string='Age')
+    currency_id = fields.Many2one('res.currency','Currency')
 
     _sql_constraints = [
         ('printer_serial_number_unique',
