@@ -44,12 +44,12 @@
             </field>
         </record>
 
-        <record id="subtype_xml" model="mail.message.subtype">
-            <field name="name">User Fields</field>
-            <field name="res_model">printers.devices</field>
-            <field name="default" eval="True"/>
-            <field name="description">The issue has been closed.</field>
-        </record>
+<!--        <record id="subtype_xml" model="mail.message.subtype">-->
+<!--            <field name="name">User Fields</field>-->
+<!--            <field name="res_model">printers.devices</field>-->
+<!--            <field name="default" eval="True"/>-->
+<!--            <field name="description">The issue has been closed.</field>-->
+<!--        </record>-->
 
         <record model="ir.ui.view" id="course_tree_view">
             <field name="name">printers.tree</field>
