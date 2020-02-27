@@ -3,7 +3,7 @@ from odoo import fields, models, api
 
 class desktops_devices(models.Model):
     _name = 'desktops.devices'
-    _description = 'for desktop'
+    _description = 'Desktop record'
     _rec_name = 'desktop_model'
 
     desktop_user = fields.Many2one('res.users', string='User')
