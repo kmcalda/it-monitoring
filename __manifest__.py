@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "IT Devices",
+    'name': "Devices",
     'summary': """Devices inventory for IT helpdesk
         """,
     'website': "https://github.com/kmcalda/it-monitoring.git",
