@@ -13,6 +13,7 @@
         'views/laptops.xml',
         'views/desktops.xml',
         'views/printers.xml',
+        'security/ir.model.access.csv',
     ],
     'application': True,
     'installation': True,
