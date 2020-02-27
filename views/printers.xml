@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
-
         <record model="ir.ui.view" id="printers_form_view">
             <field name="name">printers.form</field>
             <field name="model">printers.devices</field>
