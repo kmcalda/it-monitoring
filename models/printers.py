@@ -7,16 +7,16 @@ class printers_devices(models.Model):
     _description = 'Printer record'
     _rec_name = 'printer_model'
 
-    printer_user = fields.Many2one('res.users', string='User', required=True)
+    printer_user = fields.Many2one('res.users', string='User', required=True, track_visibility='always')
     printer_image = fields.Binary(string='Image')
-    printer_serial_number = fields.Char(string='Serial Number', required=1)
-    printer_brand = fields.Char(string='Brand')
-    printer_model = fields.Char(string='Model name')
-    printer_supplier = fields.Many2one('res.partner', string='Supplier')
-    printer_market_value = fields.Float(string='Market Value', digits=(12, 2))
-    printer_purchase_date = fields.Date(string='Purchase Date')
-    printer_warranty_expiration = fields.Date(string='Warranty Expiration')
-    printer_condition = fields.Boolean(string='Unit in use')
+    printer_serial_number = fields.Char(string='Serial Number', required=1, track_visibility='always')
+    printer_brand = fields.Char(string='Brand', track_visibility='always')
+    printer_model = fields.Char(string='Model name', track_visibility='always')
+    printer_supplier = fields.Many2one('res.partner', string='Supplier', track_visibility='always')
+    printer_market_value = fields.Float(string='Market Value', digits=(12, 2), track_visibility='always')
+    printer_purchase_date = fields.Date(string='Purchase Date', track_visibility='always')
+    printer_warranty_expiration = fields.Date(string='Warranty Expiration', track_visibility='always')
+    printer_condition = fields.Boolean(string='Unit in use', track_visibility='always')
     printer_age = fields.Char(string='Age')
     printer_comment = fields.Text(string='Internal Comment')
 
