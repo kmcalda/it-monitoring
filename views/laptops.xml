@@ -32,7 +32,8 @@
                             </group>
                             <group>
                                 <field name="laptop_supplier" options="{'no_create': True}"/>
-                                <field name="laptop_market_value" widget="monetary" options="{'currency_id': %(base.PHP)d}"/>
+                                <field name="laptop_market_value" widget="monetary"
+                                       options="{'currency_id': %(base.PHP)d}"/>
                                 <field name="laptop_purchase_date"/>
                                 <field name="laptop_warranty_expiration"/>
                             </group>

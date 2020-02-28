@@ -10,7 +10,8 @@
                         <field name="printer_image" widget="image" class="oe_avatar"/>
                         <div class="oe_title">
                             <label for="printer_model" class="oe_edit_only"/>
-                            <h1><field name="printer_model" placeholder="e.g HP Officejet Pro 8710" required="1"/></h1>
+                            <h1><field name="printer_model"
+                                       placeholder="e.g HP Officejet Pro 8710" required="1"/></h1>
                             <field name="printer_condition"/>
                             <label for="printer_condition"/>
                         </div>

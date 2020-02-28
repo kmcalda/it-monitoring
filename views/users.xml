@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<odoo>
-    <data>
-
-        <menuitem id="devices_menu" name="Users"
-                  parent="main_it_monitoring_menu" action="laptops_list_action"/>
-    </data>
-</odoo>
