@@ -2,19 +2,6 @@
 <odoo>
     <data>
 
-        <record model="ir.ui.view" id="course_tree_view">
-            <field name="name">laptops.tree</field>
-            <field name="model">laptops.devices</field>
-            <field name="arch" type="xml">
-                <tree string="Laptops Tree">
-                    <field name="laptop_user"/>
-                    <field name="laptop_serial_number"/>
-                    <field name="laptop_model"/>
-                    <field name="laptop_condition"/>
-                </tree>
-            </field>
-        </record>
-
         <record model="ir.actions.act_window" id="laptops_list_action">
             <field name="name">Laptops</field>
             <field name="res_model">laptops.devices</field>

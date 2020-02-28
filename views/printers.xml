@@ -48,7 +48,7 @@
             </field>
         </record>
 
-        <record model="ir.ui.view" id="course_tree_view">
+        <record model="ir.ui.view" id="printer_tree_view">
             <field name="name">printers.tree</field>
             <field name="model">printers.devices</field>
             <field name="arch" type="xml">

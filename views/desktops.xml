@@ -26,12 +26,14 @@
                                     <field name="desktop_ram"/>
                                 </group>
                                 <group>
+                                    <field name="desktop_brand"/>
                                     <field name="desktop_os"/>
                                     <field name="desktop_office"/>
                                 </group>
                                 <group>
                                     <field name="desktop_supplier" options="{'no_create': True}"/>
-                                    <field name="desktop_market_value"/>
+                                    <field name="desktop_market_value" widget="monetary"
+                                           options="{'currency_id': %(base.PHP)d}"/>
                                     <field name="desktop_purchase_date"/>
                                     <field name="desktop_warranty_expiration"/>
                                 </group>
@@ -46,18 +48,18 @@
             </field>
         </record>
 
-<!--        <record model="ir.ui.view" id="course_tree_view">-->
-<!--            <field name="name">desktops.tree</field>-->
-<!--            <field name="model">desktops.devices</field>-->
-<!--            <field name="arch" type="xml">-->
-<!--                <tree string="Desktops Tree">-->
-<!--                    <field name="desktop_user"/>-->
-<!--                    <field name="desktop_serial_number"/>-->
-<!--                    <field name="desktop_model"/>-->
-<!--                    <field name="desktop_condition"/>-->
-<!--                </tree>-->
-<!--            </field>-->
-<!--        </record>-->
+        <record model="ir.ui.view" id="course_tree_view">
+            <field name="name">desktops.tree</field>
+            <field name="model">desktops.devices</field>
+            <field name="arch" type="xml">
+                <tree string="Desktops Tree">
+                    <field name="desktop_user"/>
+                    <field name="desktop_serial_number"/>
+                    <field name="desktop_model"/>
+                    <field name="desktop_brand"/>
+                </tree>
+            </field>
+        </record>
 
         <record model="ir.actions.act_window" id="desktops_list_action">
             <field name="name">Desktops</field>
