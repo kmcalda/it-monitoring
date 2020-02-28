@@ -20,7 +20,7 @@
                                     <field name="desktop_serial_number"/>
                                     <field name="desktop_issued"/>
                                 </group>
-                                <group>
+                                <group string="Hardware">
                                     <field name="desktop_processor"/>
                                     <field name="desktop_hd"/>
                                     <field name="desktop_ram"/>
