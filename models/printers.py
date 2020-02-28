@@ -19,7 +19,7 @@ class printers_devices(models.Model):
     printer_condition = fields.Boolean(string='Unit in use', track_visibility='always')
     printer_age = fields.Char(string='Age')
     printer_comment = fields.Text(string='Internal Comment')
-    printer_location = fields.Selection([('LMS', 'LMS(Laguna'), ('HO',
+    printer_location = fields.Selection([('LMS', 'LMS(Laguna)'), ('HO',
                                                                  'HO(Head Office)')], default='LMS', string='Location')
 
     _sql_constraints = [
