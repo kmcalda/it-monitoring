@@ -52,6 +52,7 @@
                     <field name="printer_serial_number"/>
                     <field name="printer_model"/>
                     <field name="printer_brand"/>
+                    <field name="printer_location"/>
                 </tree>
             </field>
         </record>
