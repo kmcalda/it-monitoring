@@ -23,6 +23,7 @@ class desktops_devices(models.Model):
     desktop_condition = fields.Boolean(string='Unit in use')
     desktop_age = fields.Char(string='Age')
     desktop_issued = fields.Date(string='Date issued', track_visibility='always')
+    desktop_brand = fields.Char(string='Brand', track_visibility='always')
 
     _sql_constraints = [
         ('desktop_serial_number_unique',
