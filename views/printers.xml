@@ -18,6 +18,8 @@
                             <group>
                                 <field name="printer_user"/>
                                 <field name="printer_serial_number"/>
+                            </group>
+                            <group>
                                 <field name="printer_brand"/>
                                 <field name="printer_location"/>
                             </group>
@@ -25,6 +27,8 @@
                                 <field name="printer_supplier" options="{'no_create': True}"/>
                                 <field name="printer_market_value" widget='monetary'
                                        options="{'currency_id': %(base.PHP)d}"/>
+                            </group>
+                            <group>
                                 <field name="printer_purchase_date"/>
                                 <field name="printer_warranty_expiration"/>
                             </group>
