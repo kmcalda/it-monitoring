@@ -1,6 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
+        <record model="ir.ui.view" id="desktops_form_view">
+            <field name="name">desktops.form</field>
+            <field name="model">desktops.devices</field>
+            <field name="arch" type="xml">
+                <form string="Printers Form">
+                    <sheet>
+                        <field name="desktop_image" widget="image" class="oe_avatar"/>
+                        <div class="oe_title">
+                            <label for="desktop_model" class="oe_edit_only"/>
+                            <h1><field name="desktop_model" placeholder="e.g Dell Optiflex 780" required="1"/></h1>
+                            <field name="desktop_condition"/>
+                            <label for="desktop_condition"/>
+                        </div>
+                            <group>
+                                <group>
+                                    <field name="desktop_user"/>
+                                    <field name="desktop_serial_number"/>
+                                    <field name="desktop_issued"/>
+                                </group>
+                                <group>
+                                    <field name="desktop_processor"/>
+                                    <field name="desktop_hd"/>
+                                    <field name="desktop_ram"/>
+                                </group>
+                                <group>
+                                    <field name="desktop_os"/>
+                                    <field name="desktop_office"/>
+                                </group>
+                                <group>
+                                    <field name="desktop_supplier"/>
+                                    <field name="desktop_market_value"/>
+                                    <field name="desktop_purchase_date"/>
+                                    <field name="desktop_warranty_expiration"/>
+                                </group>
+                            </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
 
         <record model="ir.ui.view" id="course_tree_view">
             <field name="name">desktops.tree</field>
