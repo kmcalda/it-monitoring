@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
+        <record model="ir.ui.view" id="laptop_tree_view">
+            <field name="name">desktops.tree</field>
+            <field name="model">desktops.devices</field>
+            <field name="arch" type="xml">
+                <tree string="Desktops Tree">
+                    <field name="laptop_user"/>
+                    <field name="laptop_serial_number"/>
+                    <field name="laptop_model"/>
+                    <field name="laptop_brand"/>
+                </tree>
+            </field>
+        </record>
 
         <record model="ir.actions.act_window" id="laptops_list_action">
             <field name="name">Laptops</field>

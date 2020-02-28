@@ -53,7 +53,7 @@
             </field>
         </record>
 
-        <record model="ir.ui.view" id="course_tree_view">
+        <record model="ir.ui.view" id="desktop_tree_view">
             <field name="name">desktops.tree</field>
             <field name="model">desktops.devices</field>
             <field name="arch" type="xml">
