@@ -19,6 +19,7 @@
                                 <field name="printer_user"/>
                                 <field name="printer_serial_number"/>
                                 <field name="printer_brand"/>
+                                <field name="printer_location"/>
                             </group>
                             <group>
                                 <field name="printer_supplier" options="{'no_create': True}"/>
@@ -52,7 +53,6 @@
                     <field name="printer_serial_number"/>
                     <field name="printer_model"/>
                     <field name="printer_brand"/>
-                    <field name="printer_location"/>
                 </tree>
             </field>
         </record>
