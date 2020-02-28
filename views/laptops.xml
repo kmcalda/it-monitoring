@@ -10,7 +10,7 @@
                         <field name="laptop_image" widget="image" class="oe_avatar"/>
                         <div class="oe_title">
                             <label for="laptop_model" class="oe_edit_only"/>
-                            <h1><field name="laptop_model" placeholder="e.g Dell Optiflex 780" required="1"/></h1>
+                            <h1><field name="laptop_model" placeholder="e.g Dell Optiflex 780"/></h1>
                             <field name="laptop_condition"/>
                             <label for="laptop_condition"/>
                         </div>
@@ -23,7 +23,7 @@
                             <group>
                                 <field name="laptop_brand"/>
                                 <field name="laptop_processor"/>
-                                <field name="laptop_hd"/>
+                                <field name="laptop_hdd"/>
                                 <field name="laptop_ram"/>
                             </group>
                             <group>
@@ -38,7 +38,7 @@
                             </group>
                         </group>
                         <notebook>
-                            <page string="Internal Note" class="oe_edi_only">
+                            <page string="Internal Note" class="oe_edit_only">
                                 <field name="laptop_note" placeholder="Comment..."/>
                             </page>
                         </notebook>

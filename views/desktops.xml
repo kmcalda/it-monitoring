@@ -22,7 +22,7 @@
                                 </group>
                                 <group>
                                     <field name="desktop_processor"/>
-                                    <field name="desktop_hd"/>
+                                    <field name="laptop_hdd"/>
                                     <field name="desktop_ram"/>
                                 </group>
                                 <group>

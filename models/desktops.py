@@ -13,7 +13,7 @@ class desktops_devices(models.Model):
     desktop_model = fields.Char(string='Model name', track_visibility='always')
     desktop_os = fields.Char(string='Operating System', track_visibility='always')
     desktop_processor = fields.Char(string='Processor', track_visibility='always')
-    desktop_hd = fields.Char(string='HDD', track_visibility='always')
+    laptop_hdd = fields.Char(string='HDD', track_visibility='always')
     desktop_ram = fields.Char(string='RAM', track_visibility='always')
     desktop_office = fields.Char(string='Office', track_visibility='always')
     desktop_supplier = fields.Many2one('res.partner', string='Supplier', track_visibility='always')
