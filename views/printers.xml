@@ -70,6 +70,6 @@
             </field>
         </record>
         <menuitem id="printers_menu" name="Printers"
-                  parent="main_it_monitoring_menu" action="printers_list_action"/>
+                  parent="devices_menu" action="printers_list_action"/>
     </data>
 </odoo>

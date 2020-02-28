@@ -12,8 +12,7 @@
             </field>
         </record>
 
-        <menuitem id="main_it_monitoring_menu" name="Devices"/>
-        <menuitem id="laptpos_menu" name="Laptops"
-                  parent="main_it_monitoring_menu" action="laptops_list_action"/>
+        <menuitem id="laptops_menu" name="Laptops"
+                  parent="devices_menu" action="laptops_list_action"/>
     </data>
 </odoo>

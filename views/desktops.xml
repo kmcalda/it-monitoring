@@ -76,6 +76,6 @@
             </field>
         </record>
         <menuitem id="desktops_menu" name="Desktops"
-                  parent="main_it_monitoring_menu" action="desktops_list_action"/>
+                  parent="devices_menu" action="desktops_list_action"/>
     </data>
 </odoo>
