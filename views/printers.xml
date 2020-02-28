@@ -34,7 +34,7 @@
                             </group>
                         </group>
                          <notebook>
-                                <page string="Internal Notes">
+                                <page string="Internal Notes" class="oe_edit_only">
                                     <field name="printer_comment" placeholder="Comment..."/>
                                 </page>
                          </notebook>
