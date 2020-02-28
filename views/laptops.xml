@@ -1,9 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
+        <record model="ir.ui.view" id="laptop_form_view">
+            <field name="name">laptops.form</field>
+            <field name="model">laptops.devices</field>
+            <field name="arch" type="xml">
+                <form string="Course Form">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="laptop_image"/>
+                                <field name="laptop_user"/>
+                                <field name="laptop_serial_number"/>
+                                <field name="laptop_os"/>
+                            </group>
+                            <group>
+                                <field name="laptop_brand"/>
+                                <field name="laptop_model"/>
+                                <field name="laptop_processor"/>
+                                <field name="laptop_hd"/>
+                            </group>
+                            <group>
+                                <field name="laptop_ram"/>
+                                <field name="laptop_office"/>
+                                <field name="laptop_supplier"/>
+                                <field name="laptop_market_value"/>
+                            </group>
+                            <group>
+                                <field name="laptop_purchase_date"/>
+                                <field name="laptop_warranty_expiration"/>
+                                <field name="laptop_condition"/>
+                                <field name="laptop_age"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
         <record model="ir.ui.view" id="laptop_tree_view">
-            <field name="name">desktops.tree</field>
-            <field name="model">desktops.devices</field>
+            <field name="name">laptops.tree</field>
+            <field name="model">laptops.devices</field>
             <field name="arch" type="xml">
                 <tree string="Desktops Tree">
                     <field name="laptop_user"/>
