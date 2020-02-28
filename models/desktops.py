@@ -36,3 +36,18 @@ class desktops_devices(models.Model):
     def _make_uppercase(self):
         if self.desktop_serial_number:
             self.desktop_serial_number = str(self.desktop_serial_number).upper()
+
+    @api.onchange('laptop_hdd')
+    def _make_uppercase(self):
+        if self.laptop_hdd:
+            self.laptop_hdd = str(self.laptop_hdd).upper()
+
+    @api.onchange('laptop_brand')
+    def _make_uppercase(self):
+        if self.laptop_brand:
+            self.laptop_brand = str(self.laptop_brand).upper()
+
+    @api.onchange('desktop_ram')
+    def _make_uppercase(self):
+        if self.desktop_ram:
+            self.desktop_ram = str(self.desktop_ram).upper()
