@@ -15,12 +15,14 @@ class laptops_devices(models.Model):
     laptop_hd = fields.Char(string='HDD')
     laptop_ram = fields.Char(string='RAM')
     laptop_office = fields.Char(string='Office')
-    laptop_supplier = fields.Char(string='Supplier')
+    laptop_supplier = fields.Many2one('res.partner', string='Supplier')
     laptop_market_value = fields.Float(string='Market Value', digits=(12,2))
     laptop_purchase_date = fields.Date(string='Purchase Date')
     laptop_warranty_expiration = fields.Date(string='Warranty Expire')
-    laptop_condition = fields.Char(string='Condition')
+    laptop_condition = fields.Boolean(string='Unit in use', default=1)
     laptop_age = fields.Char(string='Age')
+    laptop_note = fields.Text(string='Internal Note')
+    laptop_issued = fields.Date(string='Date issued')
 
     _sql_constraints = [
         ('laptop_serial_number_unique',

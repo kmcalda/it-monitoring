@@ -7,32 +7,41 @@
             <field name="arch" type="xml">
                 <form string="Course Form">
                     <sheet>
+                        <field name="laptop_image" widget="image" class="oe_avatar"/>
+                        <div class="oe_title">
+                            <label for="laptop_model" class="oe_edit_only"/>
+                            <h1><field name="laptop_model" placeholder="e.g Dell Optiflex 780" required="1"/></h1>
+                            <field name="laptop_condition"/>
+                            <label for="laptop_condition"/>
+                        </div>
                         <group>
                             <group>
-                                <field name="laptop_image"/>
                                 <field name="laptop_user"/>
                                 <field name="laptop_serial_number"/>
-                                <field name="laptop_os"/>
+                                <field name="laptop_issued"/>
                             </group>
                             <group>
                                 <field name="laptop_brand"/>
-                                <field name="laptop_model"/>
                                 <field name="laptop_processor"/>
                                 <field name="laptop_hd"/>
-                            </group>
-                            <group>
                                 <field name="laptop_ram"/>
-                                <field name="laptop_office"/>
-                                <field name="laptop_supplier"/>
-                                <field name="laptop_market_value"/>
                             </group>
                             <group>
+                                <field name="laptop_os"/>
+                                <field name="laptop_office"/>
+                            </group>
+                            <group>
+                                <field name="laptop_supplier" options="{'no_create': True}"/>
+                                <field name="laptop_market_value" widget="monetary" options="{'currency_id': %(base.PHP)d}"/>
                                 <field name="laptop_purchase_date"/>
                                 <field name="laptop_warranty_expiration"/>
-                                <field name="laptop_condition"/>
-                                <field name="laptop_age"/>
                             </group>
                         </group>
+                        <notebook>
+                            <page string="Internal Note" class="oe_edi_only">
+                                <field name="laptop_note" placeholder="Comment..."/>
+                            </page>
+                        </notebook>
                     </sheet>
                 </form>
             </field>
