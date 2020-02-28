@@ -20,7 +20,7 @@ class desktops_devices(models.Model):
     desktop_market_value = fields.Float(string='Market Value', digit=(12,2), track_visibility='always')
     desktop_purchase_date = fields.Date(string='Purchase Date', track_visibility='always')
     desktop_warranty_expiration = fields.Date(string='Warranty Expiration', track_visibility='always')
-    desktop_condition = fields.Boolean(string='Unit in use')
+    desktop_condition = fields.Boolean(string='Unit in use', default=1)
     desktop_age = fields.Char(string='Age')
     desktop_issued = fields.Date(string='Date issued', track_visibility='always')
     desktop_brand = fields.Char(string='Brand', track_visibility='always')

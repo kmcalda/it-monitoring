@@ -16,7 +16,7 @@ class printers_devices(models.Model):
     printer_market_value = fields.Float(string='Market Value', digits=(12, 2), track_visibility='always')
     printer_purchase_date = fields.Date(string='Purchase Date', track_visibility='always')
     printer_warranty_expiration = fields.Date(string='Warranty Expiration', track_visibility='always')
-    printer_condition = fields.Boolean(string='Unit in use')
+    printer_condition = fields.Boolean(string='Unit in use', default=1)
     printer_age = fields.Char(string='Age')
     printer_comment = fields.Text(string='Internal Comment')
     printer_location = fields.Selection([('LMS', 'LMS(Laguna)'), ('HO',
