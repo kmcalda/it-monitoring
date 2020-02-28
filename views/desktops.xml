@@ -46,18 +46,18 @@
             </field>
         </record>
 
-        <record model="ir.ui.view" id="course_tree_view">
-            <field name="name">desktops.tree</field>
-            <field name="model">desktops.devices</field>
-            <field name="arch" type="xml">
-                <tree string="Desktops Tree">
-                    <field name="desktop_user"/>
-                    <field name="desktop_serial_number"/>
-                    <field name="desktop_model"/>
-                    <field name="desktop_condition"/>
-                </tree>
-            </field>
-        </record>
+<!--        <record model="ir.ui.view" id="course_tree_view">-->
+<!--            <field name="name">desktops.tree</field>-->
+<!--            <field name="model">desktops.devices</field>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <tree string="Desktops Tree">-->
+<!--                    <field name="desktop_user"/>-->
+<!--                    <field name="desktop_serial_number"/>-->
+<!--                    <field name="desktop_model"/>-->
+<!--                    <field name="desktop_condition"/>-->
+<!--                </tree>-->
+<!--            </field>-->
+<!--        </record>-->
 
         <record model="ir.actions.act_window" id="desktops_list_action">
             <field name="name">Desktops</field>
@@ -70,6 +70,5 @@
         </record>
         <menuitem id="desktops_menu" name="Desktops"
                   parent="main_it_monitoring_menu" action="desktops_list_action"/>
-
     </data>
 </odoo>
