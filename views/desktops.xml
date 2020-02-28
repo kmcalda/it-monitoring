@@ -30,7 +30,7 @@
                                     <field name="desktop_office"/>
                                 </group>
                                 <group>
-                                    <field name="desktop_supplier"/>
+                                    <field name="desktop_supplier" options="{'no_create': True}"/>
                                     <field name="desktop_market_value"/>
                                     <field name="desktop_purchase_date"/>
                                     <field name="desktop_warranty_expiration"/>
