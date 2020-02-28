@@ -32,3 +32,8 @@ class printers_devices(models.Model):
     def _make_uppercase(self):
         if self.printer_serial_number:
             self.printer_serial_number = str(self.printer_serial_number).upper()
+
+    @api.onchange('printer_brand')
+    def _make_uppercase(self):
+        if self.printer_brand:
+            self.printer_brand = str(self.printer_brand).upper()
