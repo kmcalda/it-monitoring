@@ -38,6 +38,11 @@
                                     <field name="desktop_warranty_expiration"/>
                                 </group>
                             </group>
+                        <notebook>
+                            <page string="Internal Note" class="oe_edit_only">
+                                <field name="desktop_note" placeholder="Comment..."/>
+                            </page>
+                        </notebook>
                     </sheet>
                     <div class="oe_chatter">
                         <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
