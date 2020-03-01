@@ -7,7 +7,7 @@ class laptops_devices(models.Model):
     _inherit = ['mail.thread', 'mail.activity.mixin']
 
     laptop_image = fields.Binary(string='Image')
-    laptop_user = fields.Many2one('res.users',string='User', track_visibility='always', required=1)
+    laptop_user = fields.Many2one('res.users',string='User', track_visibility='always', required=1, ondelete='set null')
     laptop_serial_number = fields.Char(string='Serial Number', track_visibility='always', required=1)
     laptop_os = fields.Char(string='Operating System', track_visibility='always')
     laptop_brand = fields.Char(string='Brand', track_visibility='always')
@@ -16,7 +16,7 @@ class laptops_devices(models.Model):
     laptop_hdd = fields.Char(string='HDD', track_visibility='always')
     laptop_ram = fields.Char(string='RAM', track_visibility='always')
     laptop_office = fields.Char(string='Office', track_visibility='always')
-    laptop_supplier = fields.Many2one('res.partner', string='Supplier', track_visibility='always')
+    laptop_supplier = fields.Many2one('res.partner', string='Supplier', track_visibility='always', ondelete='set null')
     laptop_market_value = fields.Float(string='Market Value', digits=(12,2), track_visibility='always')
     laptop_purchase_date = fields.Date(string='Purchase Date', track_visibility='always')
     laptop_warranty_expiration = fields.Date(string='Warranty Expire', track_visibility='always')

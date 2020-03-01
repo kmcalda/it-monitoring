@@ -7,12 +7,13 @@ class printers_devices(models.Model):
     _description = 'Printer record'
     _rec_name = 'printer_model'
 
-    printer_user = fields.Many2one('res.users', string='User', required=True, track_visibility='always')
+    printer_user = fields.Many2one('res.users', string='User', required=True, track_visibility='always',
+                                   ondelete='set null')
     printer_image = fields.Binary(string='Image')
     printer_serial_number = fields.Char(string='Serial Number', required=1, track_visibility='always')
     printer_brand = fields.Char(string='Brand', track_visibility='always')
     printer_model = fields.Char(string='Model name', track_visibility='always')
-    printer_supplier = fields.Many2one('res.partner', string='Supplier', track_visibility='always')
+    printer_supplier = fields.Many2one('res.partner', string='Supplier', track_visibility='always', ondelet='set null')
     printer_market_value = fields.Float(string='Market Value', digits=(12, 2), track_visibility='always')
     printer_purchase_date = fields.Date(string='Purchase Date', track_visibility='always')
     printer_warranty_expiration = fields.Date(string='Warranty Expiration', track_visibility='always')
@@ -20,7 +21,7 @@ class printers_devices(models.Model):
     printer_age = fields.Char(string='Age')
     printer_comment = fields.Text(string='Internal Comment')
     printer_location = fields.Selection([('LMS', 'LMS(Laguna)'), ('HO',
-                                                                 'HO(Head Office)')], default='LMS', string='Location')
+                                                                  'HO(Head Office)')], default='LMS', string='Location')
 
     _sql_constraints = [
         ('printer_serial_number_unique',
